@@ -6,7 +6,7 @@
 
 <!-- [![Try on CodeSand Box](/resources/codeSandBoxButton.png)](https://dashboard.datocms.com/deploy?repo=datocms/nextjs-demo) -->
 
-[![Try on Vercel](/resources/vercelButton.png)](https://game-hub-gold.vercel.app/)
+[![Try on Vercel](/resources/vercelButton.png)](https://game-hub2-clonglam.vercel.app/)
 
 In this project, I would like to create a game Hub by using React and used an API from rawg.io.
 
