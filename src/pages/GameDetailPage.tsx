@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 
 import ExpandableText from '../components/ExpandableText'
 import GameAttributes from '../components/GameAttributes'
-import GameImageGallery from '../components/GameImageGallery'
+import GameScreenshots from '../components/GameScreenshots'
 import GameTrailer from '../components/GameTrailer'
 import useGame from '../hooks/useGame'
 
@@ -15,18 +15,16 @@ const GameDetailPage = () => {
 
   if (error || !game) throw error
 
-  // console.log('game', game)
   return (
     <SimpleGrid columns={{ base: 1, md: 2 }} spacing={5}>
       <GridItem>
         <Heading>{game.name}</Heading>
         <ExpandableText>{game.description_raw}</ExpandableText>
-
         <GameAttributes game={game} />
       </GridItem>
       <GridItem>
         <GameTrailer gameId={game.id} />
-        <GameImageGallery gameId={game.id} />
+        <GameScreenshots gameId={game.id} />
       </GridItem>
     </SimpleGrid>
   )

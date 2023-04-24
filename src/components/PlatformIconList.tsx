@@ -12,21 +12,21 @@ import {
 import { MdPhoneIphone } from 'react-icons/md'
 import { SiNintendo } from 'react-icons/si'
 
-import { Platform } from '../hooks/usePlatform'
+import Platform from '../entities/Platform'
 
 interface Props {
   platforms: Platform[]
 }
 
-const PlatformIconList = ({ platforms }: Props): JSX.Element => {
+const PlatformIconList = ({ platforms = [] }: Props) => {
   const iconMap: { [key: string]: IconType } = {
     pc: FaWindows,
     playstation: FaPlaystation,
     xbox: FaXbox,
-    android: FaAndroid,
     nintendo: SiNintendo,
     mac: FaApple,
     linux: FaLinux,
+    android: FaAndroid,
     ios: MdPhoneIphone,
     web: BsGlobe,
   }
@@ -39,4 +39,5 @@ const PlatformIconList = ({ platforms }: Props): JSX.Element => {
     </HStack>
   )
 }
+
 export default PlatformIconList

@@ -7,7 +7,7 @@ import { FetchResponse } from './../services/api-client'
 const useGameImages = (gameId: number) => {
   const apiClient = new APIClient<GameImage>(`games/${gameId}/screenshots`)
 
-  return useQuery({
+  return useQuery<FetchResponse<GameImage>, Error>({
     queryKey: ['games', gameId, 'screenshots'],
     queryFn: apiClient.getAll,
   })
